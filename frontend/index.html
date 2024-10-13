@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список фильмов и игр</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключаем CSS файл -->
+</head>
+<body>
+    <div class="container">
+        <h1>Список фильмов и игр</h1>
+        <form id="itemForm">
+            <input type="text" id="title" placeholder="Название" required>
+            <select id="type" required>
+                <option value="">Выберите тип</option>
+                <option value="movie">Фильм</option>
+                <option value="game">Игра</option>
+            </select>
+            <button type="submit">Добавить</button>
+        </form>
+        <ul id="itemList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    form {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    input, select, button {
+        padding: 10px;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #218838;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        background: #f9f9f9;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    li span {
+        font-weight: bold;
+    }
+</style>
